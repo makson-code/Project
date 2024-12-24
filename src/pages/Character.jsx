@@ -7,15 +7,14 @@ import { Text } from '../components/Text/Text/'
 
 export const Character = () => {
 	const { characterId } = useParams()
-	const {data: character, isFetched} = useCharacter(characterId)
+	const {data: character, isFetched: isCharacter} = useCharacter(characterId)
     
-	const { episodeId } = character?.episode[0]?.split("/").pop()
+	const  episodeId  = character?.episode[0]?.split("/").pop()
 	const {data: episode, isFetched: isEpisode} = useEpisodeById(episodeId)
 	return (
 		<>
-			{isFetched && <Card data={character}/>}
-			{isFetched && <Text data={character} />} 
-			{isEpisode && <Text data={episode?.name} />} 
+			{isCharacter && <Card data={character}/>}
+			{isCharacter && isEpisode && <Text data={character} episode={episode}/>}
 		</>
 	)
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import s from './Text.module.scss'
 import { NavLink } from 'react-router-dom';
 
-export const Text = ({data}) => {
+export const Text = ({data, episode}) => {
     return(
         <NavLink className={s.wrapper} to={'/character/' + data.id}>
             <div className={s.content}>
@@ -18,7 +18,7 @@ export const Text = ({data}) => {
                 </p>
                 <p className={s.episode}>
                     <span>Fist seen in:</span>
-                    <p>{data.episode[0].split('/').pop()}</p>
+                    <p>{episode?.name}</p>
                 </p>
             </div>
         </NavLink>
