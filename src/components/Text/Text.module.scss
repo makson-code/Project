@@ -16,6 +16,7 @@
 }
 .content {
     padding: 10px;
+    color: #fff;
     box-sizing: border-box;
     display: grid; 
     grid-template-columns: auto auto auto; 
@@ -54,7 +55,6 @@
 
         &.location, &.episode {
             white-space: nowrap;
-            color: #fff;
             span {
                 opacity: 0.4;
                 font-weight: bold;

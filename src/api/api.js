@@ -11,7 +11,7 @@ export const characters = {
   getCharacterById(id) {
     return instance.get('/character/' + id);
   },
-  getEpisodeByUrl(url) {
-    return axios.get(url); 
-  }
+  getEpisodeById(id) {
+    return instance.get('/episode/' + id); 
+  },
 };

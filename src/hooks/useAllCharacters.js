@@ -6,12 +6,5 @@ export const useAllCharacters = (params) => {
 		queryFn: () => characters.getAllCharacters(params),
 		queryKey: ['characters', params],
 		select: data => data.data
-	});
-};
-export const useEpisodeByUrl = (url) => {
-	return useQuery({
-	  queryFn: () => characters.getEpisodeByUrl(url),
-	  queryKey: ['episode', url],
-	  select: (data) => data.data 
 	})
 }

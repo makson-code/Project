@@ -20,8 +20,8 @@ export const Card = ({data}) => {
                     <p>{data.location.name}</p>
                 </p>
                 <p className={s.episode}>
-                    <span>Fist seen in:</span>
-                    <p>{data.episode.name}</p>
+                    <span>First seen in:</span>
+                    <p>{data.episode[0].split("/").pop()}</p>
                 </p>
             </div>
         </NavLink>
