@@ -9,11 +9,3 @@ export const useCharacter = (id) => {
 		select: data => data.data
 	});
 };
-export const useEpisodeByUrl = (url) => {
-	return useQuery({
-	  queryFn: () => characters.getEpisodeByUrl(url),
-	  queryKey: ['episode', url],
-	  enabled: !!url,
-	  select: (data) => data.data 
-	})
-}
